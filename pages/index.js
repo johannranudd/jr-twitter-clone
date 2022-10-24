@@ -1,3 +1,5 @@
+import { StyledMain } from './index.styles';
+
 export default function Home() {
-  return <div>test2</div>;
+  return <StyledMain>test2</StyledMain>;
 }
