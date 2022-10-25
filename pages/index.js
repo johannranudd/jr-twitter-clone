@@ -12,7 +12,7 @@ export default function Home() {
   async function handleSubmit(e) {
     e.preventDefault();
     if (user.name.length >= 6 && user.email.includes('noroff.no')) {
-      const res = await fetch('/api/newUser', {
+      fetch('/api/newUser', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
@@ -45,7 +45,7 @@ export default function Home() {
       </form>
       <h2>Users</h2>
       <ul>
-        {data &&
+        {data.length > 0 ? (
           data.map((user) => {
             const { name, email } = user.data;
             return (
@@ -54,7 +54,10 @@ export default function Home() {
                 <p>{email}</p>
               </li>
             );
-          })}
+          })
+        ) : (
+          <h1>Loading....</h1>
+        )}
       </ul>
     </StyledMain>
   );
