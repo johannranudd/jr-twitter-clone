@@ -7,6 +7,7 @@ export default function Home() {
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
+    // vercel test
   };
 
   async function handleSubmit(e) {
