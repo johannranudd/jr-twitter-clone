@@ -7,7 +7,6 @@ export default function Home() {
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
-    // vercel test
   };
 
   async function handleSubmit(e) {
@@ -27,7 +26,6 @@ export default function Home() {
     const res = await fetch('/api/getUsers');
     const newData = await res.json();
     setData(newData);
-    // console.log(data[0].data);
   }
 
   useEffect(() => {
