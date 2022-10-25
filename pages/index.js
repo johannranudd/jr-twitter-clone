@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <StyledMain>
+      {/* <button onClick={getUser}>getUser</button> */}
       <ul>
         {data &&
           data.map((user) => {
