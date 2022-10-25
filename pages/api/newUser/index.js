@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
         data: formData,
       })
     );
-    res.status(200).json('hello');
+    res.status(200).json(dbs.data);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
